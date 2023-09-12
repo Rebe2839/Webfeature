@@ -1,0 +1,22 @@
+---
+const {  } = Astro.props;
+---
+
+<section>
+
+</section>
+
+<style>
+
+</style>
+
+<script>
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
+  //GSAP KODE HER ---DER MINDSKER ANIMATIONER FOR KØRESYGE-SÆT DEN ALTID IND
+})
+</script>
