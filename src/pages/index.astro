@@ -12,7 +12,10 @@
 	</head>
 	<body>
 		<main>
-			<h1>Webfeature</h1>
+			<section class="header">
+				<h1>Webfeature</h1>
+		</section>
+			<section>
 			<h2>Kender du Pierre?</h2>
 			<p>Pierre Falcke. Du ved formentligt ikke hvem han er. Men indtil for kort tid siden, så du hans værker et par gange om dagen, hver dag, året rundt. Pierre Falcke var en af verdens bedst sælgende stock-fotografer, og han solgte over 2 millioner fotos om året. Men Pierre kunne ikke drømme om at bruge sine egne fotos - faktisk kan han ikke fordrage sit eget arbejde.</p>
 		
@@ -36,15 +39,49 @@
 			<p>Han glæder sig over hver dags kunstneriske eksperimenter, og er for første gang i sit liv rigtig stolt af sit arbejde.</p>
 
 			<h3>Det interessante ligger i fejlen. Et godt foto med masser af fejl er interessant. Jeg eksperimenterer med udstyr og teknik, og skaber nye visuelle udtryk. Det uperfekte er perfekt.</h3>
-
+		</section>
 		</main>
 	</body>
 </html>
 
 <style>
+	
+
+	body{
+		background-color: black;
+		background-image: url('../assets/images/background.webp');
+	}
+
+.header{
+	background-image: url('../assets/images/header.webp');
+	height: var(--size-11);
+	width: 100%;
+
+	padding: var(--size-11);
+}
+
+h1{
+
+	text-align: center;
+	
+
+	}
 	h1,h2,h3{
 		text-transform: uppercase;
-
+		color: white;
+	}
+	p{
+		color: white;
 	}
 
 </style>
+
+<script>
+	import { gsap } from "gsap";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+	gsap.registerPlugin(ScrollTrigger);
+
+
+
+</script>
