@@ -7,6 +7,7 @@
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
+		<link rel="style" href="https://fonts.google.com/specimen/Carrois+Gothic+SC">
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
@@ -17,14 +18,33 @@
 		</section>
 			<section>
 			<h2>Kender du Pierre?</h2>
+			<!-- <img src="../assets/images/polorid1.webp"> -->
+			<div class="grid1">
+			<div class="polorid1">
+			<img src="img/polorid1.webp">
+		</div>
+			
+		<div class="tekst1">
 			<p>Pierre Falcke. Du ved formentligt ikke hvem han er. Men indtil for kort tid siden, så du hans værker et par gange om dagen, hver dag, året rundt. Pierre Falcke var en af verdens bedst sælgende stock-fotografer, og han solgte over 2 millioner fotos om året. Men Pierre kunne ikke drømme om at bruge sine egne fotos - faktisk kan han ikke fordrage sit eget arbejde.</p>
-		
-			<h3>Pierre sælger 2 millioner fotos om året</h3>
-			<h3>Du ser hans fotos ca. 2 gange om dagen</h3>
+		</div>
+	</div>
+	<div class="factstekst">
+			<h3 class="facts1">Pierre sælger 2 millioner fotos om året</h3>
+			<h3 class="facts2">Du ser hans fotos ca. 2 gange om dagen</h3>
+		</div>
 
 			<h2>Pierres berømmelse</h2>
+			<div class="berømmelsestekst">
+				<div class="b1">
 			<p>Pierres interesse for foto startede som ganske ung - som 10-årig fik han sin fars gamle Rollei-kamera, og begyndte at skyde løs. </p>
+		</div>
+		<div class="b2">
 			<p>Det var før den digitale revolution, så alle Pierres lommepenge blev brugt på filmruller og fremkaldelse af film. Pierre fortsatte med at fotografere på film op gennem gymnasietiden.</p>
+		</div>
+		</div>
+			<div class="stock">
+			<img src="img/polorid3.webp">
+		</div>
 			<p>De første online stock-foto websites begyndte at komme på markedet, men de store, etablerede spillere på markedet holdt lidt igen. Pierre så det for sig</p>
 
 			<h3>Om ganske få år er hele branchen digital og dem der ikke hopper med på den digitale vogn, lukker.</h3>
@@ -33,6 +53,14 @@
 			<p>Pierre tjente godt det følgende årti. Men stille og roligt begyndte billederne også at give ham kvalme. Han kunne ikke holde sit eget arbejde ud, og måtte finde et modsvar til alle de blankpolerede fotos. Noget han kunne lave med stolthed. Pierre bestluttede sig for at droppe stock-fotos, og vende tilbage til rødderne.</p>
 			<p>Han søgte inspiration i analog fotografering, i Lomo-bevægelsen, Glitch art og polaroid fotografering, og begyndte stille og roligt at skabe sig en ny stil - en stil med fokus på det uperfekte, og hvor der er et uforudsigeligt element i det at tage billeder.</p>
 			<p>Pierre tog det endda så vidt at han ikke kun droppede at tage stock-fotos. Han fjernede også alle stock-fotos fra de tjenester, han solgte sine fotos hos. Han gik fra at være en god forretningsdrivende til at blive en vaskeægte boheme-type på rekordtid.</p>
+			<div class="grid2">
+				<div class="polorid4">
+			<img src="img/polorid4.webp">
+		</div>
+		<div class="polorid5">
+			<img src="img/polorid5.webp">
+		</div>
+		</div>
 
 			<h2>En ny begyndelse</h2>
 			<p>Men Pierre er glad for sin beslutning. Indkomsten er lavere nu, men han har stadig lidt penge på kontoen, og studerer nu kunstfotografering på fotoskolen Fatamorgana. </p>
@@ -45,34 +73,115 @@
 </html>
 
 <style>
-	
+	@font-face {
+  font-family: "CarroisGothicSC", sans-serif;
+  src: url('https://fonts.google.com/specimen/Carrois+Gothic+SC')format('woff2'),
+       url('https://fonts.google.com/specimen/Carrois+Gothic+SC') format('woff');
+
+}
 
 	body{
 		background-color: black;
 		background-image: url('../assets/images/background.webp');
+		width: 100%;
+  overflow-x: hidden
 	}
 
 .header{
 	background-image: url('../assets/images/header.webp');
-	height: var(--size-11);
+	background-repeat: no-repeat;
+	height: var(--size-14);
 	width: 100%;
 
 	padding: var(--size-11);
+	background-size: cover;
 }
 
 h1{
 
 	text-align: center;
-	
-
 	}
+h3{
+	font-family: ;
+}
+
 	h1,h2,h3{
 		text-transform: uppercase;
 		color: white;
+		font-family:"CarroisGothicSC"
+	}
+
+	h2{
+		text-align: center;
+		padding: 90px;
+		font-size: var(--size-8);
 	}
 	p{
 		color: white;
+		font-family:'Courier New', Courier, monospace;
 	}
+.grid1{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.grid2{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	
+}
+	.tekst1{
+		margin-right: 20px;
+		padding: 40px;
+		font-size: var(--size-6);
+	}
+
+	.polorid1{
+	margin: 0;
+	padding-left: 21%;
+	}
+
+	.factstekst{
+		font-family:'Courier New', Courier, monospace;
+		font-size: var(--size-5);
+	}
+
+	.facts1{
+		margin-left: 3px;
+		padding: 90px;
+	}
+	.facts2{
+		margin-left: 700px;
+	}
+.berømmelsestekst{
+	font-size: var(--size-5);
+}
+
+.b1{
+margin-left: 70px;
+margin-right: 80px;
+}
+.b2{
+margin-left: 500px;	
+margin-top: 80px;
+margin-bottom: 80px;
+}
+	.stock{
+		display: grid;
+  place-items: center;
+  height: 100vh;
+
+	}
+
+	.polorid4{
+		margin-left: 80px;
+		margin-top: 180px;
+	}
+	.polorid5{
+		margin-right: 80px;
+		margin-top: 380px;
+	}
+
 
 </style>
 
