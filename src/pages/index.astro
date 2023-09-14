@@ -1,5 +1,5 @@
 ---
-import Facts from "../components/facts.astro";
+import Facts from "../components/Facts.astro";
 import Citat from "../components/Citat.astro";
 ---
 
@@ -11,6 +11,9 @@ import Citat from "../components/Citat.astro";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="style" href="https://fonts.google.com/specimen/Carrois+Gothic+SC">
 		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap" rel="stylesheet">
 		<title>Astro</title>
 	</head>
 	<body>
@@ -123,17 +126,21 @@ h1{
 	font-size: var(--size-8);
 	margin-left: 10%;
 	background-color: black;
-	max-width: 1100px;
-	
+	max-width: 1000px;
+	padding-left: 4%;
+	margin-top: 10%;
 	padding-top: 2%;
 	padding-bottom: 2%;
-
+	{animation:text-flicker-in-glow 4s linear both}
 	
 	}
+
+@keyframes text-flicker-in-glow{0%{opacity:0}10%{opacity:0;text-shadow:none}10.1%{opacity:1;text-shadow:none}10.2%{opacity:0;text-shadow:none}20%{opacity:0;text-shadow:none}20.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.25)}20.6%{opacity:0;text-shadow:none}30%{opacity:0;text-shadow:none}30.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}30.5%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}30.6%{opacity:0;text-shadow:none}45%{opacity:0;text-shadow:none}45.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}50%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}55%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}55.1%{opacity:0;text-shadow:none}57%{opacity:0;text-shadow:none}57.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35)}60%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35)}60.1%{opacity:0;text-shadow:none}65%{opacity:0;text-shadow:none}65.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35),0 0 100px rgba(255,255,255,.1)}75%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35),0 0 100px rgba(255,255,255,.1)}75.1%{opacity:0;text-shadow:none}77%{opacity:0;text-shadow:none}77.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.4),0 0 110px rgba(255,255,255,.2),0 0 100px rgba(255,255,255,.1)}85%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.4),0 0 110px rgba(255,255,255,.2),0 0 100px rgba(255,255,255,.1)}85.1%{opacity:0;text-shadow:none}86%{opacity:0;text-shadow:none}86.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.6),0 0 60px rgba(255,255,255,.45),0 0 110px rgba(255,255,255,.25),0 0 100px rgba(255,255,255,.1)}100%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.6),0 0 60px rgba(255,255,255,.45),0 0 110px rgba(255,255,255,.25),0 0 100px rgba(255,255,255,.1)}}
 	h1,h2,h3{
 		text-transform: uppercase;
 		color: white;
-		font-family:'Courier New', Courier, monospace
+		font-family:'Courier New', Courier, monospace;
+		font-family: 'Carrois Gothic SC', sans-serif;
 	}
 
 	h2{
@@ -141,7 +148,9 @@ h1{
 		text-align: center;
 		padding: 90px;
 		font-size: var(--size-8);
+	
 	}
+
 	p{
 		color: white;
 		font-family:'Courier New', Courier, monospace;
@@ -163,14 +172,15 @@ h1{
 	max-width: 800px;
 	margin-left: 10%;
 	margin-top: 5%;
-	margin-bottom: 15%;
+	margin-bottom: 20%;
 	margin-inline: auto;
 	}
 
 	.polorid1{
 	margin: 0;
-	padding-left: 21%;
+	padding-left: 25%;
 	margin-bottom: 15%;
+	{animation:wobble-hor-bottom 5s infinite both}
 	}
 
 	.factstekst{
@@ -209,24 +219,30 @@ h1{
 	max-width: 800px;
 	margin-inline: auto;
 	margin-top: 20%;
+	margin-bottom: 20%;
 }
 	.stock{
 		display: grid;
   place-items: center;
   height: 100vh;
   margin-top: 10%;
-
+  {animation:scale-down-center 4s cubic-bezier(.25,.46,.45,.94) infinite alternate-reverse both}
 	}
+
+@keyframes jello-horizontal{0%{transform:scale3d(1,1,1)}30%{transform:scale3d(1.25,.75,1)}40%{transform:scale3d(.75,1.25,1)}50%{transform:scale3d(1.15,.85,1)}65%{transform:scale3d(.95,1.05,1)}75%{transform:scale3d(1.05,.95,1)}100%{transform:scale3d(1,1,1)}}
 
 	.filmrulle{
 		margin-top: 10%;
+		{animation:slide-in-left 5s cubic-bezier(.25,.46,.45,.94) infinite alternate-reverse both}
 	}
+	@keyframes slide-in-left{0%{transform:translateX(-1000px);opacity:0}100%{transform:translateX(0);opacity:1}}
 
 	.filmrulle2{
 		transform: scaleX(-1);
 		margin-left: 35%;
 		margin-top: 2%;
-	}
+		{animation:slide-in-right 5s cubic-bezier(.25,.46,.45,.94) infinite alternate-reverse both}
+	}@keyframes slide-in-right{0%{transform:translateX(1000px);opacity:0}100%{transform:translateX(0);opacity:1}}
 
 	.citat{
   display: grid;
@@ -235,12 +251,17 @@ h1{
 }
 
 	.polorid4{
-		margin-left: 80px;
+		margin-left: 200px;
 		margin-top: 180px;
+		{animation:wobble-hor-bottom 5s infinite both}
 	}
+
+
+@keyframes wobble-hor-bottom{0%,100%{transform:translateX(0);transform-origin:50% 50%}15%{transform:translateX(-30px) rotate(-6deg)}30%{transform:translateX(15px) rotate(6deg)}45%{transform:translateX(-15px) rotate(-3.6deg)}60%{transform:translateX(9px) rotate(2.4deg)}75%{transform:translateX(-6px) rotate(-1.2deg)}}
 	.polorid5{
-		margin-right: 80px;
+		margin-right: 200px;
 		margin-top: 380px;
+		{animation:wobble-hor-bottom 5s infinite both}
 	}
 
 	.skillevej1{
@@ -249,6 +270,7 @@ h1{
 	max-width: 800px;
 	margin-left: 10%;
 	margin-top: 5%;
+	margin-bottom: 5%;
 	}
 
 	.skillevej2{
@@ -257,6 +279,7 @@ h1{
 	max-width: 800px;
 	margin-left: 40%;
 	margin-top: 5%;
+	margin-bottom: 5%;
 	}
 
 	.skillevej3{
@@ -265,6 +288,7 @@ h1{
 	max-width: 800px;
 	margin-left: 10%;
 	margin-top: 5%;
+	margin-bottom: 10%;
 	}
 
 	.ny_begyndelse1{
@@ -280,11 +304,13 @@ h1{
 	max-width: 800px;
 	margin-left: 40%;
 	margin-top: 5%;
+	margin-bottom: 10%;
 	}
 
 .citat1{
 	margin-left: 10%;
 	margin-top: 5%;
+{animation:scale-down-center 4s cubic-bezier(.25,.46,.45,.94) infinite alternate-reverse both}
 }
 .citat_tekst{
 	text-align: center;
@@ -296,7 +322,11 @@ h1{
 .citat2{
 	margin-left: 70%;
 	margin-top: 0%;
+	{animation:scale-down-center 4s cubic-bezier(.25,.46,.45,.94) infinite alternate-reverse both}
 }
+@keyframes scale-down-center{0%{transform:scale(1)}100%{transform:scale(.5)}}
+
+
 
 </style>
 
@@ -306,6 +336,151 @@ h1{
 
 	gsap.registerPlugin(ScrollTrigger);
 
+	gsap.from(".citat_tekst", {
+      yPercent: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".citat_tekst",
+        // start: "start 20%",
+        // end: "bottom 20%",
+        scrub: true,
+
+       
+      },
+	  
+    });
+	
+	gsap.from(".tekst1", {
+      yPercent: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".tekst1",
+        // start: "start 20%",
+        // end: "bottom 20%",
+        scrub: true,
+
+      },
+    });
+
+	gsap.from(".stock_foto_tekst", {
+      yPercent: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".stock_foto_tekst",
+        // start: "start 20%",
+        // end: "bottom 20%",
+        scrub: true,
+
+     
+      },
+    });
+	gsap.from(".b1", {
+      yPercent: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".b1",
+        // start: "start 20%",
+        // end: "bottom 20%",
+        scrub: true,
+
+      
+      },
+    });
+
+	gsap.from(".b2", {
+      yPercent: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".b2",
+        // start: "start 20%",
+        // end: "bottom 20%",
+        scrub: true,
+
+     
+      },
+    });
+	gsap.from(".skillevej1", {
+      yPercent: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".skillevej1",
+        // start: "start 20%",
+        // end: "bottom 20%",
+        scrub: true,
+
+       
+      },
+    });
+	gsap.from(".skillevej2", {
+      yPercent: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".skillevej2",
+        // start: "start 20%",
+        // end: "bottom 20%",
+        scrub: true,
+
+      
+      },
+    });
+
+	gsap.from(".skillevej3", {
+      yPercent: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".skillevej3",
+        // start: "start 20%",
+        // end: "bottom 20%",
+        scrub: true,
+
+        
+      },
+    });
+
+	gsap.from(".ny_begyndelse1", {
+      yPercent: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".ny_begyndelse1",
+        // start: "start 20%",
+        // end: "bottom 20%",
+        scrub: true,
+
+    
+      },
+    });
+	gsap.from(".ny_begyndelse2", {
+      yPercent: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".ny_begyndelse2",
+        // start: "start 20%",
+        // end: "bottom 20%",
+        scrub: true,
+
+   
+      },
+    });
 
 
 </script>

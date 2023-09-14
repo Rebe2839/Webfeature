@@ -12,7 +12,19 @@
 section{
     
 }
-    .billede1, .billede2, .billede3{
+
+.billede1, .billede3{
+    {animation:slide-in-left 5s cubic-bezier(.25,.46,.45,.94) infinite alternate-reverse both}
+}
+
+@keyframes slide-in-left{0%{transform:translateX(-1000px);opacity:0}100%{transform:translateX(0);opacity:1}}
+   
+.billede2{
+    {animation:slide-in-right 5s cubic-bezier(.25,.46,.45,.94) infinite alternate-reverse both}
+}
+
+@keyframes slide-in-right{0%{transform:translateX(1000px);opacity:0}100%{transform:translateX(0);opacity:1}}
+.billede1, .billede2, .billede3{
         padding-top: 5%;
         padding-bottom: 5%;
 
@@ -47,6 +59,40 @@ section{
 
 	gsap.registerPlugin(ScrollTrigger);
 
+    gsap.from(".tekst_et", {
+      yPercent: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".tekst_et",
+        // start: "start 20%",
+        // end: "bottom 20%",
+        scrub: true,
 
+     
+      },
+    });
+    gsap.from(".tekst_to", {
+      yPercent: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".tekst_to",
+        // start: "start 20%",
+        // end: "bottom 20%",
+        scrub: true,
 
+  
+      },
+    });
+
+  gsap.to(".galleri", {
+    scrollTrigger: {
+      trigger: ".galleri",
+      start: "center center",
+      toggleClass: "jello-vertical",
+    },
+  });
 </script>
