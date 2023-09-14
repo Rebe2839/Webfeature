@@ -1,5 +1,6 @@
 ---
 import Facts from "../components/facts.astro";
+import Citat from "../components/Citat.astro";
 ---
 
 
@@ -20,20 +21,19 @@ import Facts from "../components/facts.astro";
 			<section>
 				<h2>Kender du Pierre?</h2>
 				<!-- <img src="../assets/images/polorid1.webp"> -->
-				<div class="grid1">
-					<div class="polorid1">
-						<img src="img/polorid1.webp">
-					</div>
-				</div>
 				<div class="tekst1">
 					<p>Pierre Falcke. Du ved formentligt ikke hvem han er. Men indtil for kort tid siden, så du hans værker et par gange om dagen, hver dag, året rundt. Pierre Falcke var en af verdens bedst sælgende stock-fotografer, og han solgte over 2 millioner fotos om året. Men Pierre kunne ikke drømme om at bruge sine egne fotos - faktisk kan han ikke fordrage sit eget arbejde.</p>
 				</div>
+				
+					<div class="polorid1">
+						<img src="img/polorid1.webp">
+					</div>
+			
+				
 			</section>
-			<div class="factstekst">
+		
 				<Facts/>
-				<h3 class="facts1">Pierre sælger 2 millioner fotos om året</h3>
-				<h3 class="facts2">Du ser hans fotos ca. 2 gange om dagen</h3>
-			</div>
+		
 			<h2>Pierres berømmelse</h2>
 			<div class="berømmelsestekst">
 				<div class="b1">
@@ -46,12 +46,24 @@ import Facts from "../components/facts.astro";
 			<div class="stock">
 				<img src="img/polorid3.webp">
 			</div>
-			<p>De første online stock-foto websites begyndte at komme på markedet, men de store, etablerede spillere på markedet holdt lidt igen. Pierre så det for sig</p>
-			<h3>Om ganske få år er hele branchen digital og dem der ikke hopper med på den digitale vogn, lukker.</h3>
+	
+			<p class="stock_foto_tekst">De første online stock-foto websites begyndte at komme på markedet, men de store, etablerede spillere på markedet holdt lidt igen. Pierre så det for sig</p>
+			
+			<div>
+				<img class="citat1" src="/img/citat.webp" alt="">
+			  </div>
+			  <div>
+				<h3 class="citat_tekst">Om ganske få år er hele branchen digital og dem der ikke hopper med på den digitale vogn, lukker.</h3>
+			  </div>
+			  <div>
+				<img  class="citat2"src="/img/citat.webp" alt="">
+			  </div>
+		
+	
 			<h2>En skillevej</h2>
-			<p>Pierre tjente godt det følgende årti. Men stille og roligt begyndte billederne også at give ham kvalme. Han kunne ikke holde sit eget arbejde ud, og måtte finde et modsvar til alle de blankpolerede fotos. Noget han kunne lave med stolthed. Pierre bestluttede sig for at droppe stock-fotos, og vende tilbage til rødderne.</p>
-			<p>Han søgte inspiration i analog fotografering, i Lomo-bevægelsen, Glitch art og polaroid fotografering, og begyndte stille og roligt at skabe sig en ny stil - en stil med fokus på det uperfekte, og hvor der er et uforudsigeligt element i det at tage billeder.</p>
-			<p>Pierre tog det endda så vidt at han ikke kun droppede at tage stock-fotos. Han fjernede også alle stock-fotos fra de tjenester, han solgte sine fotos hos. Han gik fra at være en god forretningsdrivende til at blive en vaskeægte boheme-type på rekordtid.</p>
+			<p class="skillevej1">Pierre tjente godt det følgende årti. Men stille og roligt begyndte billederne også at give ham kvalme. Han kunne ikke holde sit eget arbejde ud, og måtte finde et modsvar til alle de blankpolerede fotos. Noget han kunne lave med stolthed. Pierre bestluttede sig for at droppe stock-fotos, og vende tilbage til rødderne.</p>
+			<p class="skillevej2">Han søgte inspiration i analog fotografering, i Lomo-bevægelsen, Glitch art og polaroid fotografering, og begyndte stille og roligt at skabe sig en ny stil - en stil med fokus på det uperfekte, og hvor der er et uforudsigeligt element i det at tage billeder.</p>
+			<p class="skillevej3">Pierre tog det endda så vidt at han ikke kun droppede at tage stock-fotos. Han fjernede også alle stock-fotos fra de tjenester, han solgte sine fotos hos. Han gik fra at være en god forretningsdrivende til at blive en vaskeægte boheme-type på rekordtid.</p>
 			<div class="grid2">
 				<div class="polorid4">
 					<img src="img/polorid4.webp">
@@ -61,10 +73,20 @@ import Facts from "../components/facts.astro";
 				</div>
 			</div>
 			<h2>En ny begyndelse</h2>
-			<p>Men Pierre er glad for sin beslutning. Indkomsten er lavere nu, men han har stadig lidt penge på kontoen, og studerer nu kunstfotografering på fotoskolen Fatamorgana. </p>
-			<p>Han glæder sig over hver dags kunstneriske eksperimenter, og er for første gang i sit liv rigtig stolt af sit arbejde.</p>
+			<p class="ny_begyndelse1">Men Pierre er glad for sin beslutning. Indkomsten er lavere nu, men han har stadig lidt penge på kontoen, og studerer nu kunstfotografering på fotoskolen Fatamorgana. </p>
+			<p class="ny_begyndelse2">Han glæder sig over hver dags kunstneriske eksperimenter, og er for første gang i sit liv rigtig stolt af sit arbejde.</p>
 	
-			<h3>Det interessante ligger i fejlen. Et godt foto med masser af fejl er interessant. Jeg eksperimenterer med udstyr og teknik, og skaber nye visuelle udtryk. Det uperfekte er perfekt.</h3>
+
+			<div>
+				<img class="citat1" src="/img/citat.webp" alt="">
+			  </div>
+			  <div>
+				<h3 class="citat_tekst">Det interessante ligger i fejlen. Et godt foto med masser af fejl er interessant. Jeg eksperimenterer med udstyr og teknik, og skaber nye visuelle udtryk. Det uperfekte er perfekt.</h3>
+			  </div>
+			  <div>
+				<img  class="citat2"src="/img/citat.webp" alt="">
+			  </div>
+	
 		</section>
 		</main>
 	</body>
@@ -127,14 +149,20 @@ h1{
 	
 }
 	.tekst1{
-		margin-right: 20px;
-		padding: 40px;
-		font-size: var(--size-6);
+	
+		font-size: var(--size-5);
+		text-align: left;
+	max-width: 800px;
+	margin-left: 10%;
+	margin-top: 5%;
+	margin-bottom: 15%;
+	margin-inline: auto;
 	}
 
 	.polorid1{
 	margin: 0;
 	padding-left: 21%;
+	margin-bottom: 15%;
 	}
 
 	.factstekst{
@@ -154,20 +182,39 @@ h1{
 }
 
 .b1{
-margin-left: 70px;
-margin-right: 80px;
+	text-align: left;
+	max-width: 800px;
+	margin-left: 10%;
+	margin-top: 5%;
 }
 .b2{
-margin-left: 500px;	
-margin-top: 80px;
-margin-bottom: 80px;
+	text-align: left;
+	max-width: 800px;
+	margin-left: 40%;
+	margin-top: 5%;
+	
+}
+
+.stock_foto_tekst{
+	font-size: var(--size-5);
+	text-align: center;
+	max-width: 800px;
+	margin-inline: auto;
+	margin-top: 20%;
 }
 	.stock{
 		display: grid;
   place-items: center;
   height: 100vh;
+  margin-top: 10%;
 
 	}
+
+	.citat{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-inline: auto;
+}
 
 	.polorid4{
 		margin-left: 80px;
@@ -178,7 +225,60 @@ margin-bottom: 80px;
 		margin-top: 380px;
 	}
 
+	.skillevej1{
+		font-size: var(--size-5);
+	text-align: left;
+	max-width: 800px;
+	margin-left: 10%;
+	margin-top: 5%;
+	}
 
+	.skillevej2{
+		font-size: var(--size-5);
+	text-align:left;
+	max-width: 800px;
+	margin-left: 40%;
+	margin-top: 5%;
+	}
+
+	.skillevej3{
+		font-size: var(--size-5);
+	text-align: left;
+	max-width: 800px;
+	margin-left: 10%;
+	margin-top: 5%;
+	}
+
+	.ny_begyndelse1{
+		font-size: var(--size-5);
+	text-align: left;
+	max-width: 800px;
+	margin-left: 10%;
+	margin-top: 5%;
+	}
+	.ny_begyndelse2{
+		font-size: var(--size-5);
+	text-align:left;
+	max-width: 800px;
+	margin-left: 40%;
+	margin-top: 5%;
+	}
+
+.citat1{
+	margin-left: 10%;
+	margin-top: 10%;
+}
+.citat_tekst{
+	text-align: center;
+	font-size: var(--size-6);
+	max-width: 800px;
+	margin-inline: auto;
+}
+
+.citat2{
+	margin-left: 70%;
+	margin-top: 0%;
+}
 
 </style>
 
